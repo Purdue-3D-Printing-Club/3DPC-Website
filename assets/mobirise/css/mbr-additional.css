@@ -1451,6 +1451,7 @@ a {
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 100;
+  font-size: 20pt;
 }
 .cid-uCwdf9puIk .alert-success {
   background-color: rgba(33, 122, 95, 0.95);
