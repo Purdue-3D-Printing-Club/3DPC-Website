@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=D96qQJ"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=D96qQJ" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=zdwiPe"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=zdwiPe" type="text/css">
 
   
   
@@ -98,7 +98,7 @@
 
 </section>
 
-<section data-bs-version="5.1" class="form5 cid-uCwdf9puIk" id="form02-2j" data-rv-view="45">
+<section data-bs-version="5.1" class="form5 cid-uCwdf9puIk" id="form02-2j" data-rv-view="113">
     
 
 
@@ -107,7 +107,7 @@
     <div id="events-wrapper">
     <!--  ########   Event Cards   ######## -->
       <div id="no-events-msg">
-      <!-- <h3 >No upcoming events! Please check again later.</h3> -->
+       <!--<h3 >No upcoming events! Please check again later.</h3>-->
       </div>
 
        
@@ -116,42 +116,43 @@
 </div>
 
 <!-- RSVP Form -->
-        <section id="rsvp"></section>
+  <!--
+      <section id='rsvp'></section>
         <div class="row justify-content-center event-card">
             <div class="external-date">11/5/2025</div>
 
-              <h3 class="event-header display-5">
-                <strong>Vixiv Demo</strong>
+              <h3 class="event-header" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".mbr-section-title">
+                <b>Vixiv Demo</b>
               </h3>
-              <h4 class="event-subtitle display-7">
+              <h4 class="event-subtitle" mbr-theme-style="display-7" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle">
                   Vixiv will be demoing their AI lattice infill generator, and food will be provided!
-                  <br><br>
-                  <strong>Time and Location:</strong> Wednesday, November 5, 5:00 PM @ DLR 131
+                  <br/><br/>
+                  <b>Time and Location:</b> Wednesday, November 5, 5:00 PM @ DLR 131
               </h4>
 
           <div class="event-map-wrapper">
-             <iframe class="event-figure col-sm-12" title="Event Location" src="https://www.google.com/maps/embed/v1/place?q=DLR+West+Lafayette,+IN,+USA&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+             <iframe class="event-figure col-sm-12" title="Event Location" src="https://www.google.com/maps/embed/v1/place?q=DLR+West+Lafayette,+IN,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
           </div>
             <div class="row justify-content-center">
                 <form action="https://script.google.com/macros/s/AKfycbz2QvTwsZCJTzpfd3ka3phSLDsEf5-nmOqz1C1M5CnONt8l0gqmEPmf2gwo9P7ZESqx/exec" name="Form Name" method="POST" class="mbr-form form-with-styler" id="rsvp_form">
                         
                     <div class="dragArea row">
                         <div class="col-md col-sm-12 form-group mb-3" data-for="first_name">
-                            <input type="text" required="" name="first_name" placeholder="First Name" data-form-field="first_name" class="form-control" value="">
+                            <input type="text" required name="first_name" placeholder="First Name" data-form-field="first_name" class="form-control" value>
                         </div>
                         <div class="col-md col-sm-12 form-group mb-3" data-for="last_name">
-                            <input type="text" required="" name="last_name" placeholder="Last Name" data-form-field="last_name" class="form-control" value="">
+                            <input type="text" required name="last_name" placeholder="Last Name" data-form-field="last_name" class="form-control" value>
                         </div>
                         <div class="col-12 form-group mb-3" data-for="email">
-                            <input type="email" required="" name="email" placeholder="Email" data-form-field="email" class="form-control" value="">
+                            <input type="email" required name="email" placeholder="Email" data-form-field="email" class="form-control" value>
                         </div>
                         <div class="col-md form-group mb-3 attending-wrapper form-control" data-for="guests">
                           <div class="attending">
                             <span>Will you be attending?</span>
                             <span>
-                              <select class="attending-dropdown" name="attending" required="">
+                              <select class="attending-dropdown" name="attending" required>
                                 <option value="In-Person">In-Person</option>
-                                <!-- <option value="Virtually">Virtually</option> -->
+                                <option value="Virtually">Virtually</option>
                                 <option value="No">No</option>
                             </select>
                             </span>
@@ -162,9 +163,9 @@
                         </div>
 
 
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn form-rsvp-button">
+                        <div mbr-buttons="true" mbr-theme-style="display-7" data-toolbar="-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd" class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn form-rsvp-button">
                           <div class="rsvp-wrapper"><button class="btn btn-primary" type="submit">RSVP</button>
-                          <img hidden="hidden" id="loading" src="assets/images/loading.gif" alt="Mobirise Website Builder" title="">
+                          <img hidden="hidden" id="loading" src="assets/images/loading.gif" alt="Mobirise Website Builder" title>
                           </div>
                         </div>
                        
@@ -227,7 +228,8 @@
             
           </div>
         </div>
-      <!-- End RSVP Form -->
+      -->
+    <!-- End RSVP Form -->
 
 
 
