@@ -10,7 +10,8 @@ img,
 .slide-content,
 .plan,
 .card,
-.item-wrapper {
+.item-wrapper,
+.item-wrapper .mbr-overlay {
   border-radius: 0 !important;
 }
 .video-wrapper {
@@ -773,6 +774,11 @@ a {
     padding-right: 16px;
   }
 }
+*:focus-visible {
+  outline: red solid 2px !important;
+  outline-offset: 2px !important;
+  transition: outline 0.2s ease-in-out;
+}
 .cid-uEiCgQbyLP {
   z-index: 1000;
   width: 100%;
@@ -1451,7 +1457,6 @@ a {
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 100;
-  font-size: 20pt;
 }
 .cid-uCwdf9puIk .alert-success {
   background-color: rgba(33, 122, 95, 0.95);
@@ -1505,6 +1510,9 @@ a {
 .cid-uCwdf9puIk .event-subtitle {
   margin: 15px 0 15px 0;
   text-align: center;
+}
+.cid-uCwdf9puIk #events-wrapper {
+  background-color: #f0faff;
 }
 @media (min-width: 600px) {
   .cid-uCwdf9puIk .event-card {
