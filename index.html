@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=zUuPQo"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=zUuPQo" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=2UWpjM"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=2UWpjM" type="text/css">
 
   
   
@@ -51,14 +51,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
-						<a class="nav-link link text-danger text-primary display-4" href="index.html">Home<br></a>
-					</li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="about.html">About</a></li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="support.html">How to Print<br></a></li>
+						<a class="nav-link link text-white display-4" href="index.html">Home<br></a>
+					</li><li class="nav-item"><a class="nav-link link text-white display-4" href="about.html">About</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="support.html">How to Print<br></a></li>
 					<li class="nav-item">
-						<a class="nav-link link text-danger text-primary display-4" href="schedule.html" aria-expanded="false">Schedule</a>
-					</li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="https://discord.com/invite/emHWMM7f5C" target="_blank">Discord</a></li>
-          <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="https://dayofgiving.purdue.edu/donate?campaign_id=237821" target="_blank">PDOG</a></li>
-          <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="https://www.toocoolpurdue.com/TooCOOLPurdueWL/vECLiveStudentOrganization/ShowLiveStudentOrganization.aspx" target="_blank">TooCool</a></li></ul>
+						<a class="nav-link link text-white display-4" href="schedule.html" aria-expanded="false">Schedule</a>
+					</li><li class="nav-item"><a class="nav-link link text-white display-4" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link link text-white display-4" href="https://discord.com/invite/emHWMM7f5C" target="_blank">Discord</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="https://www.toocoolpurdue.com/TooCOOLPurdueWL/vECLiveStudentOrganization/ShowLiveStudentOrganization.aspx" target="_blank">TooCool</a></li></ul>
 				
 				
 			</div>
@@ -75,7 +73,7 @@
 				<h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1"><strong>Think. Design. Create.</strong></h1>
 				
 				<p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">The best resource for Student 3D Printing at Purdue</p>
-				<div class="mbr-section-btn"><a class="btn btn-danger display-7" href="support.html">How to Print<br></a></div>
+				<div class="mbr-section-btn"><a class="btn btn-danger display-7" href="https://discord.gg/emHWMM7f5C">Join Our Discord</a></div>
 			</div>
 		</div>
 	</div>
@@ -96,7 +94,7 @@
 
 </section>
 
-<section data-bs-version="5.1" class="form5 cid-uCwdf9puIk" id="form02-2j" data-rv-view="45">
+<section data-bs-version="5.1" class="form5 cid-uCwdf9puIk" id="form02-2j" data-rv-view="22">
     
 
 
@@ -174,55 +172,7 @@
                     </div>
                     <input hidden="hidden" name="honeypot">
                 </form>
-                <script>
-                  document.getElementById('rsvp_form').addEventListener('submit', function(e) {
-                  e.preventDefault(); // Prevent the default full-page submit
-                  
-                  // Hide both alerts at the beginning of submission
-                  let successAlert = document.getElementById('successAlert');
-                  let errorAlert = document.getElementById('errorAlert');
-                  let loading = document.getElementById('loading')
-                  successAlert.hidden = true;
-                  errorAlert.hidden = true;
-                  loading.hidden=true;
-
-
-                  const formData = new FormData(this);
-                  loading.hidden = false;
-                  fetch(this.action, {
-                    method: 'POST',
-                    body: formData
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                    loading.hidden = true;
-                    
-                    if (data.result === 'success') {
-                      successAlert.hidden = false;
-                      setTimeout(() => {
-                          successAlert.hidden = true;
-                          errorAlert.hidden = true;
-                      }, 5000)
-                      this.reset();
-                    } else {
-                      errorAlert.hidden = false;
-                      setTimeout(() => {
-                          errorAlert.hidden = true;
-                          successAlert.hidden = true;
-                      }, 5000)        
-                    }
-                  })
-                  .catch(error => {
-                    console.error('Error:', error);
-                    errorAlert.hidden = false;
-                    setTimeout(() => {
-                          errorAlert.hidden = true;
-                          successAlert.hidden = true;
-                      }, 5000)     
-                    loading.hidden = true;
-                        });
-                });
-                </script>
+                [JS_CODE_0]
             
           </div>
         </div>
@@ -232,124 +182,7 @@
 
 
 
-<script type="module">
-      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js'
-      import { getFirestore, doc, updateDoc, getDoc, onSnapshot,  collection, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js'
-      import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js';
-      updateNoEventsMessage();
-
-      const firebaseConfig = {
-        apiKey: "AIzaSyCbFmuNBKIXW091uHm--uRxVSETb6Z0470",
-        authDomain: "dpc-bot.firebaseapp.com",
-        projectId: "dpc-bot",
-        storageBucket: "dpc-bot.firebasestorage.app",
-        messagingSenderId: "846436118402",
-        appId: "1:846436118402:web:faad5d1e4ee3789f00299b"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-
-      const db = getFirestore(app);
-      const auth = getAuth(app);
-
-      signInAnonymously(auth)
-        .then((userCredential) => {
-          //console.log('User signed in:', userCredential.user);
-
-          // Create a reference to the "events" collection
-        const eventsCollection = collection(db, 'events');
-        const eventsQuery = query(eventsCollection, orderBy("date", "asc"));
-
-        // Listen for live updates from the collection
-        onSnapshot(eventsQuery, (querySnapshot) => {
-          querySnapshot.docChanges().forEach((change) => {
-            if (change.type === 'added') {
-              let data = change.doc.data()
-              //console.log('Document added:', data);
-
-              //dynamically render the new element
-              createEventCard(data)
-            }
-            if (change.type === 'removed') {
-              //console.log('Document removed:', change.doc.data());
-
-            }
-            updateNoEventsMessage();
-          });
-        });
-
-        })
-        .catch((error) => {
-          console.error('Error signing in:', error.message);
-        });
-
-            
-    function createEventCard(eventData) {
-        //console.log('### eventData: ', eventData)
-        const section = document.getElementById('events-wrapper');
-
-        const card = document.createElement('div');
-        card.className = 'row justify-content-center event-card';
-
-        // Date
-        const dateDiv = document.createElement('div');
-        dateDiv.className = 'external-date';
-        dateDiv.textContent = eventData['date-str'];
-        card.appendChild(dateDiv);
-
-        // Title
-        const title = document.createElement('h3');
-        title.className = 'event-header display-5 animate__animated animate__delay-1s animate__fadeIn';
-        title.setAttribute('mbr-theme-style', 'display-5');
-        title.setAttribute('mbr-if', 'showTitle');
-        title.setAttribute('data-app-selector', '.mbr-section-title');
-
-        const titleBold = document.createElement('b');
-        titleBold.textContent = eventData.title;
-        title.appendChild(titleBold);
-        card.appendChild(title);
-
-        // Subtitle
-        const subtitle = document.createElement('h4');
-        subtitle.className = 'event-subtitle';
-        subtitle.setAttribute('mbr-theme-style', 'display-7');
-        subtitle.setAttribute('data-app-selector', '.mbr-section-subtitle');
-
-        subtitle.innerHTML = `
-            ${eventData.message}<br/><br/>
-            <b>Time and Location:</b> ${eventData["time-location"]}
-            `
-
-        card.appendChild(subtitle);
-      
-
-        // Map
-        const mapWrapper = document.createElement('div');
-        mapWrapper.className = 'event-map-wrapper';
-
-        const iframe = document.createElement('iframe');
-        iframe.className = 'event-figure col-sm-12';
-        iframe.title = 'Event Location';
-        iframe.src = eventData['map-embed-link'];
-
-        mapWrapper.appendChild(iframe);
-        card.appendChild(mapWrapper);
-
-        section.appendChild(card);
-    }
-
-    function updateNoEventsMessage() {
-      //console.log('updating no events msg')
-      const msg = document.getElementById('no-events-msg');
-      const section = document.getElementById('events-wrapper');
-
-      const hasCards = section.querySelectorAll('.event-card').length > 0;
-      //console.log('no events msg: hasCards is ', hasCards)
-      msg.style.display = hasCards ? 'none' : 'block';
-    }
-
-    </script>
+[JS_CODE_1]
     
  
 </section>
@@ -391,7 +224,7 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/3462506" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/html-builder.html">HTML Website Generator</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com">Mobirise </a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
   <input name="animation" type="hidden">
