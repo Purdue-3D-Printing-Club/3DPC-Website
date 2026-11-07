@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "3DPC Website",
-    "currentPage": "Print.html",
+    "currentPage": "print.html",
     "theme": {
       "name": "startm5",
       "title": "StartM5",
@@ -6142,7 +6142,7 @@
         }
       ]
     },
-    "Print.html": {
+    "print.html": {
       "settings": {
         "title": "Print",
         "order": "5"
